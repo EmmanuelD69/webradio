@@ -1,3 +1,7 @@
+/* Fonts 
+font-family: 'Monoton', cursive;
+font-family: 'Tulpen One', cursive;
+font-family: 'Vast Shadow', cursive; */
 /* global style */
 * {
   margin: 0;
@@ -78,7 +82,6 @@ main {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background: cornflowerblue;
 }
 
 .artistWindow .artistPicture {
@@ -88,6 +91,7 @@ main {
 }
 
 .artistWindow h2 {
+  font-family: "Londrina Shadow", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,10 +123,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: darkcyan;
 }
 
 .playlist h2 {
+  font-family: "Londrina Shadow", cursive;
   font-size: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,14 +159,15 @@ main {
 }
 
 .playlist ul li {
+  min-width: 20vw;
+  font-family: "Tulpen One", cursive;
   height: 5vh;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 footer {
   height: 10vh;
   width: 100vw;
-  background: coral;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,6 +181,8 @@ footer {
 
 footer h4,
 footer ul {
+  font-family: "Monoton", cursive;
+  letter-spacing: 0.5rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
