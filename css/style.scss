@@ -37,30 +37,51 @@ main {
 }
 
 .artistWindow {
+  height: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  background: cornflowerblue;
   .artistPicture {
     object-fit: contain;
+    height: 60vh;
   }
   h2,
   h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
+    height: 10vh;
     // background: chartreuse;
   }
 }
 
 .playlist {
+  height: 100%;
   flex: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+
+  background: darkcyan;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
   ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+    height: 70vh;
+    li {
+      height: 5vh;
+    }
   }
 }
 
