@@ -41,7 +41,13 @@ header {
           align-items: center;
   height: 10vh;
   width: 100vw;
-  background: chocolate;
+}
+
+header .title {
+  font-family: "Monoton", cursive;
+  letter-spacing: 1rem;
+  word-spacing: 5rem;
+  font-size: 5rem;
 }
 
 main {
@@ -81,8 +87,7 @@ main {
   height: 60vh;
 }
 
-.artistWindow h2,
-.artistWindow h3 {
+.artistWindow h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,6 +98,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 10vh;
+  font-size: 4rem;
 }
 
 .playlist {
@@ -117,6 +123,7 @@ main {
 }
 
 .playlist h2 {
+  font-size: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,15 +147,16 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   list-style: none;
   height: 70vh;
 }
 
 .playlist ul li {
   height: 5vh;
+  font-size: 2rem;
 }
 
 footer {
@@ -163,7 +171,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
 }
 
 footer h4,
