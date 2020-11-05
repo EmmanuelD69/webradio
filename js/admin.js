@@ -119,6 +119,7 @@ class Drumkit {
       }
     }
   }
+}
   
   const drumKit = new Drumkit();
   
