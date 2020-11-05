@@ -1,0 +1,246 @@
+/*** PARAMETRAGES GLOBAL DU FICHIER CSS ***/
+/* basic reset du comportement par défaut */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* pour plus de facilités de calculs des fonts et utilisation du rem au lieu dex px et em. 10px = 1rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* permet d'ignorer les éléments de type "svg" et "i" lorsqu'on clic dessus, cela nous sera utile pour nos clics sur les boutons "mute". */
+i,
+svg {
+  pointer-events: none;
+}
+
+/*** TITRE APPLICATION WEB ***/
+/* Styling du Titre */
+.title {
+  font-size: 3rem;
+  background: grey;
+  color: whitesmoke;
+  width: 50%;
+  margin: auto;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** CONTENU DE L'APPLICATION WEB ***/
+/* Style global de l'appli web */
+.sequencer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+/* Stylisme du Titre de chaque Samples */
+.sequencer h1 {
+  display: flex;
+  justify-content: flex-start;
+  background: rgb(82, 81, 81);
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  align-items: center;
+  width: 15rem;
+}
+
+/* Stylisme de l'ensemble des éléments formant la partie "controls" */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+/* Stylisme boutons MUTE */
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: gray;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+
+/* Stylisme bouton MUTE en mode ACTIF */
+.mute.active {
+  background: rgb(187, 52, 52);
+}
+
+/* Stylisme de la partie SELECT permettant de choisir un sample */
+select {
+  padding: 1rem;
+  font-size: 2rem;
+  width: 25rem;
+  background: whitesmoke;
+}
+
+/*** PADS ***/
+/* Stylisme global des pads */
+.kick-pad,
+.clap-pad,
+.crash-pad,
+.hihat-pad,
+.openhat-pad,
+.perc-pad,
+.snare-pad,
+.tom-pad,
+.other-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+/* Stylisme de la couleur de fond des pads avec ou sans classe "active" */
+.kick-pad {
+  background: rgb(158, 158, 197);
+}
+.kick-pad.active {
+  background: rgb(75, 75, 102);
+}
+.clap-pad {
+  background: burlywood;
+}
+.clap-pad.active {
+  background: rgb(146, 121, 88);
+}
+.crash-pad {
+  background: cadetblue;
+}
+.crash-pad.active {
+  background: rgb(47, 82, 83);
+}
+.hihat-pad {
+  background: coral;
+}
+.hihat-pad.active {
+  background: rgb(172, 85, 54);
+}
+.openhat-pad {
+  background: darkgoldenrod;
+}
+.openhat-pad.active {
+  background: rgb(95, 70, 7);
+}
+.perc-pad {
+  background: darkseagreen;
+}
+.perc-pad.active {
+  background: rgb(87, 116, 87);
+}
+.snare-pad {
+  background: rgb(187, 115, 153);
+}
+.snare-pad.active {
+  background: rgb(107, 66, 88);
+}
+.tom-pad {
+  background: firebrick;
+}
+.tom-pad.active {
+  background: rgb(255, 100, 100);
+}
+.other-pad {
+  background: rgb(76, 129, 76);
+}
+.other-pad.active {
+  background: rgb(129, 219, 129);
+}
+
+/* Animation des pads lancé par l'intermédiaire d'une transition */
+.pad {
+  transition: all 0.7s ease;
+}
+/***********************************************/
+
+/*** LIGNES DE SAMPLES ***/
+/* Stylisme des différentes lignes de samples via Flexbox */
+.kick-sample,
+.clap-sample,
+.crash-sample,
+.hihat-sample,
+.openhat-sample,
+.perc-sample,
+.snare-sample,
+.tom-sample,
+.other-sample {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.kick,
+.clap,
+.crash,
+.hihat,
+.openhat,
+.perc,
+.snare,
+.tom,
+.other {
+  display: flex;
+}
+/********************************/
+
+/* Stylisme bouton PLAY/STOP */
+.play {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background: gray;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+/*** stylisme de la partie tempo ***/
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+/* affichage du tempo */
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+/* Barre du slider tempo */
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: grey;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+/************************************************/
+
+/*** ANIMATION DES PADS LORSQUE "PLAY" EST ACTIF ***/
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

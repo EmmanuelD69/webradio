@@ -1,0 +1,316 @@
+@charset "UTF-8";
+/*** PARAMETRAGES GLOBAL DU FICHIER CSS ***/
+/* basic reset du comportement par défaut */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* pour plus de facilités de calculs des fonts et utilisation du rem au lieu dex px et em. 10px = 1rem */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* permet d'ignorer les éléments de type "svg" et "i" lorsqu'on clic dessus, cela nous sera utile pour nos clics sur les boutons "mute". */
+i,
+svg {
+  pointer-events: none;
+}
+
+/*** TITRE APPLICATION WEB ***/
+/* Styling du Titre */
+.title {
+  font-size: 3rem;
+  background: grey;
+  color: whitesmoke;
+  width: 50%;
+  margin: auto;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*** CONTENU DE L'APPLICATION WEB ***/
+/* Style global de l'appli web */
+.sequencer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 90vh;
+}
+
+/* Stylisme du Titre de chaque Samples */
+.sequencer h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #525151;
+  color: white;
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
+}
+
+/* Stylisme de l'ensemble des éléments formant la partie "controls" */
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0rem 2rem;
+}
+
+/* Stylisme boutons MUTE */
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: gray;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+/* Stylisme bouton MUTE en mode ACTIF */
+.mute.active {
+  background: #bb3434;
+}
+
+/* Stylisme de la partie SELECT permettant de choisir un sample */
+select {
+  padding: 1rem;
+  font-size: 2rem;
+  width: 25rem;
+  background: whitesmoke;
+}
+
+/*** PADS ***/
+/* Stylisme global des pads */
+.kick-pad,
+.clap-pad,
+.crash-pad,
+.hihat-pad,
+.openhat-pad,
+.perc-pad,
+.snare-pad,
+.tom-pad,
+.other-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+/* Stylisme de la couleur de fond des pads avec ou sans classe "active" */
+.kick-pad {
+  background: #9e9ec5;
+}
+
+.kick-pad.active {
+  background: #4b4b66;
+}
+
+.clap-pad {
+  background: burlywood;
+}
+
+.clap-pad.active {
+  background: #927958;
+}
+
+.crash-pad {
+  background: cadetblue;
+}
+
+.crash-pad.active {
+  background: #2f5253;
+}
+
+.hihat-pad {
+  background: coral;
+}
+
+.hihat-pad.active {
+  background: #ac5536;
+}
+
+.openhat-pad {
+  background: darkgoldenrod;
+}
+
+.openhat-pad.active {
+  background: #5f4607;
+}
+
+.perc-pad {
+  background: darkseagreen;
+}
+
+.perc-pad.active {
+  background: #577457;
+}
+
+.snare-pad {
+  background: #bb7399;
+}
+
+.snare-pad.active {
+  background: #6b4258;
+}
+
+.tom-pad {
+  background: firebrick;
+}
+
+.tom-pad.active {
+  background: #ff6464;
+}
+
+.other-pad {
+  background: #4c814c;
+}
+
+.other-pad.active {
+  background: #81db81;
+}
+
+/* Animation des pads lancé par l'intermédiaire d'une transition */
+.pad {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+/***********************************************/
+/*** LIGNES DE SAMPLES ***/
+/* Stylisme des différentes lignes de samples via Flexbox */
+.kick-sample,
+.clap-sample,
+.crash-sample,
+.hihat-sample,
+.openhat-sample,
+.perc-sample,
+.snare-sample,
+.tom-sample,
+.other-sample {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+
+.kick,
+.clap,
+.crash,
+.hihat,
+.openhat,
+.perc,
+.snare,
+.tom,
+.other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/********************************/
+/* Stylisme bouton PLAY/STOP */
+.play {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  background: gray;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+/*** stylisme de la partie tempo ***/
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+/* affichage du tempo */
+.tempo p {
+  font-size: 1.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+/* Barre du slider tempo */
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  width: 100%;
+  position: relative;
+  background: grey;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+/************************************************/
+/*** ANIMATION DES PADS LORSQUE "PLAY" EST ACTIF ***/
+@-webkit-keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes playTrack {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/*# sourceMappingURL=adminstyle.css.map */
